@@ -11,7 +11,7 @@ const SelectComponent = (options, cb) => {
   const selectElement = document.createElement("select");
   selectElement.className = "mx-1 px-1 bg-gray-500";
 
-  if (cb) selectElement.addEventListener("click", cb);
+  if (cb) selectElement.addEventListener("change", cb);
 
   options.map((item) => selectElement.append(OptionComponent(item)));
 
